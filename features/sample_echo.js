@@ -13,4 +13,8 @@ module.exports = function(controller) {
         await bot.reply(message, `Echo: ${ message.text }`);
     });
 
+    controller.on('channel_join', async(bot, message) => {
+        await bot.reply(message, 'This is the first message')
+    })
+
 }

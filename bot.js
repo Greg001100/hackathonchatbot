@@ -1,11 +1,11 @@
 //  __   __  ___        ___
-// |__) /  \  |  |__/ |  |  
-// |__) \__/  |  |  \ |  |  
+// |__) /  \  |  |__/ |  |
+// |__) \__/  |  |  \ |  |
 
 // This is the main file for the resumeBot bot.
 
 // Import Botkit's core features
-const { Botkit } = require('botkit');
+const { Botkit, BotkitConversation } = require('botkit');
 const { BotkitCMSHelper } = require('botkit-plugin-cms');
 
 // Import a platform-specific adapter for web.
@@ -43,9 +43,10 @@ if (process.env.CMS_URI) {
     }));
 }
 
+
+
 // Once the bot has booted up its internal services, you can use them to do stuff.
 controller.ready(() => {
-
     // load traditional developer-created local custom feature modules
     controller.loadModules(__dirname + '/features');
 
@@ -63,8 +64,3 @@ controller.ready(() => {
     }
 
 });
-
-
-
-
-
